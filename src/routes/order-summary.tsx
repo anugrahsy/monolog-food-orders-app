@@ -16,6 +16,7 @@ import {
 	Download,
 	Eye,
 } from "lucide-react";
+import { Drawer } from "vaul";
 import { useState, useEffect } from "react";
 
 export const Route = createFileRoute("/order-summary")({
@@ -580,80 +581,88 @@ Please process my order! Thank you.
 				</section>
 			</main>
 
-			{/* Bottom Button */}
-			<div className="fixed bottom-0 left-0 w-full p-6 bg-background/90 backdrop-blur-md z-30 animate-in slide-in-from-bottom duration-500 space-y-3 border-t border-white/50">
-				<section className="w-full">
-					<div className="bg-white rounded-full p-2 flex items-center gap-3">
-						<div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
-							<TicketPercent className="w-5 h-5" />
-						</div>
-						<div className="flex-1">
-							<div className="flex gap-2">
-								<input
-									type="text"
-									value={promoCode}
-									onChange={(e) => setPromoCode(e.target.value)}
-									placeholder="Masukan Kode Promo"
-									className="flex-1 bg-transparent rounded-full px-3 py-1.5 text-sm outline-none border border-transparent focus:border-primary transition-all"
-								/>
+			<div className="z-30">
+				<Drawer.Root open={true} modal={false}>
+					<Drawer.Portal>
+						<Drawer.Content className="fixed bottom-0 left-0 right-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] bg-background/90 backdrop-blur-md border-t border-white/50">
+							<div className="p-4 bg-transparent flex-1 space-y-3">
+								<div className="mx-auto w-12 h-1.5 shrink-0 rounded-full bg-gray-300 mb-4" />
+								<section className="w-full">
+									<div className="bg-white rounded-full p-2 flex items-center gap-3 shadow-sm">
+										<div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
+											<TicketPercent className="w-5 h-5" />
+										</div>
+										<div className="flex-1">
+											<div className="flex gap-2">
+												<input
+													type="text"
+													value={promoCode}
+													onChange={(e) => setPromoCode(e.target.value)}
+													placeholder="Masukan Kode Promo"
+													className="flex-1 bg-transparent rounded-full px-3 py-1.5 text-sm outline-none border border-transparent focus:border-primary transition-all"
+												/>
+												<button
+													onClick={handleApplyPromo}
+													className="bg-primary text-white text-xs font-bold px-4 py-1.5 rounded-full active:scale-95 transition-transform"
+												>
+													Apply
+												</button>
+											</div>
+										</div>
+									</div>
+									{appliedDiscount > 0 && (
+										<p className="text-green-600 text-xs font-bold mt-2 ml-2">
+											Promo applied! You saved {formatPrice(appliedDiscount)}
+										</p>
+									)}
+								</section>
+								<div className="flex flex-col bg-white rounded-[20px] p-5 mb-4 font-sans shadow-sm">
+									<div className="flex justify-between items-center text-sm">
+										<span className="text-[#454343]">Subtotal</span>
+										<span className="text-[#050404] font-bold">
+											{formatPrice(totalPrice)}
+										</span>
+									</div>
+
+									{distance !== null && (
+										<div className="flex justify-between items-center text-sm mt-2">
+											<span className="text-[#454343]">Delivery Fee</span>
+											<span className="text-[#050404] font-bold">
+												{formatPrice(deliveryFee)}
+											</span>
+										</div>
+									)}
+
+									{appliedDiscount > 0 && (
+										<div className="flex justify-between items-center text-sm mt-2">
+											<span className="text-[#454343]">Discount</span>
+											<span className="text-[#050404] font-bold">
+												- {formatPrice(appliedDiscount)}
+											</span>
+										</div>
+									)}
+
+									<hr className="border-dashed border-[#E3E3E3] my-3" />
+
+									<div className="flex justify-between items-center">
+										<span className="text-[#454343] font-bold text-sm">
+											Total Payment
+										</span>
+										<span className="text-[#050404] font-bold text-sm">
+											{formatPrice(finalTotal)}
+										</span>
+									</div>
+								</div>
 								<button
-									onClick={handleApplyPromo}
-									className="bg-primary text-white text-xs font-bold px-4 py-1.5 rounded-full active:scale-95 transition-transform"
+									onClick={handleCheckout}
+									className="w-full bg-primary text-white font-bold text-lg py-4 rounded-full active:scale-95 transition-all hover:bg-opacity-90 flex items-center justify-center gap-2 shadow-lg shadow-primary/30"
 								>
-									Apply
+									Order Via Whatsapp <Send className="w-5 h-5" />
 								</button>
 							</div>
-						</div>
-					</div>
-					{appliedDiscount > 0 && (
-						<p className="text-green-600 text-xs font-bold mt-2 ml-2">
-							Promo applied! You saved {formatPrice(appliedDiscount)}
-						</p>
-					)}
-				</section>
-				<div className="flex flex-col bg-white rounded-[20px] p-5 mb-4 font-sans">
-					<div className="flex justify-between items-center text-sm">
-						<span className="text-[#454343]">Subtotal</span>
-						<span className="text-[#050404] font-bold">
-							{formatPrice(totalPrice)}
-						</span>
-					</div>
-
-					{distance !== null && (
-						<div className="flex justify-between items-center text-sm">
-							<span className="text-[#454343]">Delivery Fee</span>
-							<span className="text-[#050404] font-bold">
-								{formatPrice(deliveryFee)}
-							</span>
-						</div>
-					)}
-
-					{appliedDiscount > 0 && (
-						<div className="flex justify-between items-center text-sm">
-							<span className="text-[#454343]">Discount</span>
-							<span className="text-[#050404] font-bold">
-								- {formatPrice(appliedDiscount)}
-							</span>
-						</div>
-					)}
-
-					<hr className="border-dashed border-[#E3E3E3] my-2" />
-
-					<div className="flex justify-between items-center">
-						<span className="text-[#454343] font-bold text-sm">
-							Total Payment
-						</span>
-						<span className="text-[#050404] font-bold text-sm">
-							{formatPrice(finalTotal)}
-						</span>
-					</div>
-				</div>
-				<button
-					onClick={handleCheckout}
-					className="w-full bg-primary text-white font-bold text-lg py-4 rounded-full active:scale-95 transition-all hover:bg-opacity-90 flex items-center justify-center gap-2"
-				>
-					Order Via Whatsapp <Send className="w-5 h-5" />
-				</button>
+						</Drawer.Content>
+					</Drawer.Portal>
+				</Drawer.Root>
 			</div>
 		</div>
 	);

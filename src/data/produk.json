@@ -1,0 +1,320 @@
+{
+    "RECOMMENDED": [
+        {
+            "name": "Chicken Bilss",
+            "price": 45000,
+            "rating": 4.8,
+            "isBestSeller": true,
+            "image": "/banner-1.png",
+            "description": "Crispy chicken with spicy sauce and sesame seeds."
+        },
+        {
+            "name": "Beef Burger",
+            "price": 55000,
+            "rating": 4.5,
+            "isBestSeller": false,
+            "image": "/banner-2.png",
+            "description": "Juicy beef patty with cheese, lettuce, and tomato."
+        }
+    ],
+    "MONOLOG_SIGNATURE": [
+        {
+            "name": "Monolog Coffee",
+            "price": 20000
+        },
+        {
+            "name": "Creamy Coffee",
+            "price": 20000
+        },
+        {
+            "name": "Vanilla Blue Haze",
+            "price": 20000
+        },
+        {
+            "name": "Peachy Pop Latte",
+            "price": 20000
+        },
+        {
+            "name": "Manggo Hazelnut",
+            "price": 20000
+        }
+    ],
+    "TEA_SERIES": [
+        {
+            "name": "Lychee Tea",
+            "price": 16000
+        },
+        {
+            "name": "Lemon Tea",
+            "price": 12000
+        },
+        {
+            "name": "Peach Tea",
+            "price": 15000
+        }
+    ],
+    "WARM_MEAL": [
+        {
+            "name": "Mie Bangladesh Aceh / Original",
+            "price": 18000,
+            "description": "Mie viral dengan bumbu khas & rempah Aceh / Original"
+        },
+        {
+            "name": "Mie Kari Jepang",
+            "price": 18000,
+            "description": "Mi kuah kari Jepang autentik"
+        },
+        {
+            "name": "Mie Chili Oil",
+            "price": 20000,
+            "description": "Mi kenyal dengan chili oil pedas gurih"
+        },
+        {
+            "name": "Mie Goreng Monolog",
+            "price": 13000,
+            "description": "Secret recipe Monolog"
+        },
+        {
+            "name": "Mie Goreng Garlic Cheese",
+            "price": 20000,
+            "description": "Indomie goreng keju leleh creamy"
+        },
+        {
+            "name": "Mie Rebus Carbonara",
+            "price": 18000,
+            "description": "Mi kuah carbonara creamy"
+        },
+        {
+            "name": "Mie Rebus Monolog",
+            "price": 15000,
+            "description": "Carbonara style khas Monolog"
+        }
+    ],
+    "MILKSHAKE_SERIES": [
+        {
+            "name": "Creamy Choco",
+            "price": 17000
+        },
+        {
+            "name": "Vanilla",
+            "price": 16000
+        },
+        {
+            "name": "Taro",
+            "price": 16000
+        },
+        {
+            "name": "Matcha",
+            "price": 17000
+        },
+        {
+            "name": "Red Velvet",
+            "price": 16000
+        },
+        {
+            "name": "Choco Vanilla",
+            "price": 17000
+        },
+        {
+            "name": "Choco Green",
+            "price": 17000
+        },
+        {
+            "name": "Choco Taro",
+            "price": 17000
+        }
+    ],
+    "ESPRESSO_BASED": [
+        {
+            "name": "Americano",
+            "price": 12000
+        },
+        {
+            "name": "Affogato",
+            "price": 15000
+        },
+        {
+            "name": "Cappuccino",
+            "price": 20000
+        },
+        {
+            "name": "Caffè Latte",
+            "price": 20000
+        },
+        {
+            "name": "Mochaccino",
+            "price": 22000
+        }
+    ],
+    "MAIN_COURSE": [
+        {
+            "name": "Magelangan",
+            "price": 13000,
+            "description": "Nasi dan mie dengan condiment lengkap"
+        },
+        {
+            "name": "Nasi Goreng Gila",
+            "price": 18000,
+            "description": "Nasi goreng pedas khas Jawa Tengah"
+        },
+        {
+            "name": "Chicken Katsu Kari Jepang",
+            "price": 28000,
+            "description": "Ayam katsu dengan saus kari Jepang"
+        },
+        {
+            "name": "Chicken Katsu Saos BBQ",
+            "price": 28000,
+            "description": "Katsu dengan saus BBQ"
+        },
+        {
+            "name": "Ricebowl Ayam Mentega",
+            "price": 25000,
+            "description": "Ayam dadu saus mentega"
+        },
+        {
+            "name": "Ricebowl Ayam Teriyaki",
+            "price": 25000,
+            "description": "Ayam teriyaki"
+        },
+        {
+            "name": "Ricebowl Ayam Kecap",
+            "price": 25000,
+            "description": "Ayam kecap gurih pedas"
+        }
+    ],
+    "REFRESHER": [
+        {
+            "name": "Lemon Citrus",
+            "price": 22000
+        },
+        {
+            "name": "Crimson Mint",
+            "price": 25000
+        },
+        {
+            "name": "Midnight Spark",
+            "price": 25000
+        },
+        {
+            "name": "Mango Splash",
+            "price": 16000
+        },
+        {
+            "name": "Mango Tropic Shot",
+            "price": 22000
+        },
+        {
+            "name": "Shirley Strawberry",
+            "price": 16000
+        },
+        {
+            "name": "Electric Blue",
+            "price": 22000
+        },
+        {
+            "name": "Lychee Rain",
+            "price": 16000
+        },
+        {
+            "name": "Lychee Green Mist",
+            "price": 22000
+        },
+        {
+            "name": "Blue Ocean",
+            "price": 16000
+        },
+        {
+            "name": "Wild Mint",
+            "price": 16000
+        },
+        {
+            "name": "Peach Fizz",
+            "price": 22000
+        }
+    ],
+    "FLAVOURED_LATTE": [
+        {
+            "name": "Butterscotch Coffee",
+            "price": 22000
+        },
+        {
+            "name": "Hazelnut Coffee",
+            "price": 22000
+        },
+        {
+            "name": "Silky Vanilla Coffee",
+            "price": 22000
+        },
+        {
+            "name": "Aires Coffee",
+            "price": 22000
+        },
+        {
+            "name": "Caramel Coffee",
+            "price": 22000
+        },
+        {
+            "name": "Caramel Popcorn Latte",
+            "price": 22000
+        }
+    ],
+    "YAKULT_SERIES": [
+        {
+            "name": "Strawberry Zing",
+            "price": 20000
+        },
+        {
+            "name": "Mango Tropical",
+            "price": 20000
+        },
+        {
+            "name": "Lychee Zest",
+            "price": 20000
+        }
+    ],
+    "SNACK": [
+        {
+            "name": "French Fries",
+            "price": 15000
+        },
+        {
+            "name": "Chicken Nugget",
+            "price": 15000
+        },
+        {
+            "name": "Onion Ring",
+            "price": 15000
+        },
+        {
+            "name": "Mix Platter",
+            "price": 18000
+        },
+        {
+            "name": "Choco Banana",
+            "price": 15000
+        }
+    ],
+    "ADD_ON": [
+        {
+            "name": "Single Shot Espresso",
+            "price": 5000
+        },
+        {
+            "name": "Nasi",
+            "price": 5000
+        },
+        {
+            "name": "Telur",
+            "price": 3000
+        },
+        {
+            "name": "Mineral Water",
+            "price": 5000
+        },
+        {
+            "name": "Chicken Katsu",
+            "price": 15000
+        }
+    ]
+}
